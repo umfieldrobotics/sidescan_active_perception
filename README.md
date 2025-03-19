@@ -1,5 +1,4 @@
-##Source code for "Learning Which Side to Scan: Multi-View Informed Active Perception
-with Side Scan Sonar for Autonomous Underwater Vehicles"
+## Source code for "Learning Which Side to Scan: Multi-View Informed Active Perception with Side Scan Sonar for Autonomous Underwater Vehicles"
 
 arXiv: https://arxiv.org/abs/2402.01106
 
