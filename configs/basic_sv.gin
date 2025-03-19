@@ -1,0 +1,9 @@
+main.data_dir='/home/advaith/Documents/harder_scenes2'
+main.val_dir='/home/advaith/Documents/triadelphia_dataset/cropped_regions'
+main.num_epochs=1000
+main.num_gpus=[0,1,2,3]
+main.weight_save_dir='./'
+main.num_workers=8
+main.batch_size=64 
+main.lr=1e-5
+main.l1_lambda = 0.001

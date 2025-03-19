@@ -1,0 +1,32 @@
+#write a script for blender py ot generate rocks
+#
+#
+
+import bpy
+import numpy as np
+import os
+import glob
+import random
+import trimesh
+
+
+search_dir = '/home/advaith/Downloads/object_meshes/train_files/mines'
+export_dir = '/home/advaith/Downloads/object_meshes/train_files/rocks'
+meshes = glob.glob(os.path.join(search_dir, '*.obj'))
+meshes.sort()
+num_exports = 10
+num_presets = 6
+count = 0
+for mesh in tqdm(meshes): 
+    for i in range(num_presets):
+        for j in range(num_exports):
+            m = trimesh.load(mesh)
+            bounds = m.bounds[1] - m.bounds[0]
+#            print(m.bounds)
+            bpy.ops.mesh.add_mesh_rock(preset_values=str(i))
+
+            #export the rock mesh as .obj 
+            bpy.ops.export_scene.obj(filepath="/home/advaith/Downloads/object_meshes/train_files/rocks/rock_{}.obj".format(count))
+            bjs = [ob for ob in bpy.context.scene.objects]
+            bpy.ops.object.delete({"selected_objects": bjs})
+            count += 1

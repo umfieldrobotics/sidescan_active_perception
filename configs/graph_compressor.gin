@@ -1,0 +1,12 @@
+main.data_dir='/mnt/syn/advaiths/NRL_GMVATR/harder_scenes2'
+main.val_dir='/home/advaith/Documents/triadelphia_dataset/cropped_regions'
+main.data_dir='/mnt/syn/advaiths/NRL_GMVATR/harder_scenes2'
+main.num_epochs=10000
+main.num_gpus=[0]
+main.weight_save_dir='./'
+main.num_workers=0
+main.batch_size=64
+main.lr=3e-4
+main.gnn_layers=2
+main.p = 0.5
+main.gnn_hidden_dim=64
